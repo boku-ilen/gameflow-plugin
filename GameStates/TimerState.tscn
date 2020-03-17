@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/gameflow/GameState.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GameStates/LabeledTimer.gd" type="Script" id=2]
+
+[node name="TimerState" instance=ExtResource( 1 )]
+next_state_path = "res://GameStates/ButtonState.tscn"
+
+[node name="LabeledTimer" type="Control" parent="." index="0"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="LabeledTimer" index="0"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="LabeledTimer" index="1"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="LabeledTimer/Timer" to="." method="emit_completed"]
