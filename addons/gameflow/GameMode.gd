@@ -1,5 +1,4 @@
 extends Node
-class_name GameMode
 
 
 export(String, FILE, "*.tscn") var first_state_path
