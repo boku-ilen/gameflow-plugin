@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://addons/gameflow/GameMode.tscn" type="PackedScene" id=1]
-
-[node name="DemoMode" instance=ExtResource( 1 )]
-first_state_path = "res://GameStates/TimerState.tscn"

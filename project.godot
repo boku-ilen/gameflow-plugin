@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "GameMode",
+"language": "GDScript",
+"path": "res://addons/gameflow/GameMode.gd"
+}, {
+"base": "Node",
 "class": "GameState",
 "language": "GDScript",
 "path": "res://addons/gameflow/GameState.gd"
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://addons/gameflow/GameStateTransition.gd"
 } ]
 _global_script_class_icons={
+"GameMode": "",
 "GameState": "",
 "GameStateTransition": ""
 }
@@ -27,8 +33,12 @@ _global_script_class_icons={
 [application]
 
 config/name="gameflow-plugin"
-run/main_scene="res://GameModes/DemoMode.tscn"
+run/main_scene="res://GameModes/DemoGameMode.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "gameflow" )
 
 [rendering]
 
