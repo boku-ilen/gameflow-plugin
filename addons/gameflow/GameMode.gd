@@ -1,5 +1,10 @@
 extends Node
 
+#
+# A GameMode provides an initial GameState. The rest is up to the individual
+# GameStates. This node mostly manages its GameState children.
+#
+
 
 export(String, FILE, "*.tscn") var first_state_path
 
